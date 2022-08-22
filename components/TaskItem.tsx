@@ -14,7 +14,7 @@ export const TaskItem: FC<Omit<Task, 'created_at' | 'user_id'>> = ({
     <li className="my-3 text-lg font-extrabold">
       <span>{title}</span>
       <div className="float-right ml-20 flex">
-        <PencilIcon
+        <PencilAltIcon
           className="y-5 mx-1 h-5 cursor-pointer text-blue-500"
           onClick={() => {
             update({
