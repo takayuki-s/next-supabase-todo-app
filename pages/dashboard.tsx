@@ -1,13 +1,15 @@
 import { NextPage } from 'next'
 import {
   LogoutIcon,
-  StatusOfflineIcon,
+  StatusOnlineIcon,
   DocumentTextIcon,
 } from '@heroicons/react/solid'
 import { supabase } from '../utils/supabase'
 import { Layout } from '../components/Layout'
 import { TaskList } from '../components/TaskList'
 import { TaskForm } from '../components/TaskForm'
+import NoticeForm from '../components/NoticeForm'
+import { NoticeList } from '../components/NoticeList'
 
 const Dashboard: NextPage = () => {
   const signOut = () => {
@@ -26,6 +28,13 @@ const Dashboard: NextPage = () => {
           </div>
           <TaskForm />
           <TaskList />
+        </div>
+        <div>
+          <div className="my-3 flex justify-center">
+            <StatusOnlineIcon className="2-8 h-8 text-blue-500" />
+          </div>
+          <NoticeForm />
+          <NoticeList />
         </div>
       </div>
     </Layout>
